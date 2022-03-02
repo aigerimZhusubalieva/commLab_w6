@@ -1,0 +1,161 @@
+html{
+	font-size: 16px;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.myGrid{
+	background-color: lightsteelblue;
+	padding: 20px;
+	max-width: 900px;
+	min-height: 500px;
+	margin: 20px auto 20px auto;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr; /* number of specified column width defines the number of columns */
+	grid-template-rows: 1fr 0.5fr 0.5fr;
+	grid-gap: 20px;
+	align-items: center; /* align items for column, justify items is for rows */
+	justify-items: center;
+}
+
+.myGrid div{
+	background-color: lightgoldenrodyellow;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+}
+
+.myGrid div:nth-child(1){
+	background-color: lightpink;
+	grid-column: 2 / span 2;
+	grid-row: 2 / span 2;
+}
+
+.myGrid div:nth-child(2){
+	background-color: lightseagreen;
+	grid-column: 1 / -1;
+	grid-row: 1;
+}
+
+.myGrid div:nth-child(3){
+	background-color: lightcoral;
+}
+
+.myGrid div:nth-child(6){
+	grid-column: 2 / 4;
+}
+
+.myGrid2 {
+	background-color: bisque;
+	display: grid;
+	margin: 5px;
+	padding: 5px;
+	width: calc(100% - 20px);
+	grid-gap: 10px;
+	grid-template-areas: 
+		"h h h e"
+		"s m m e"
+		"s m m e"
+		"s f f f";
+}
+
+.header{
+	background-color: lightskyblue;
+	grid-area: h;
+}
+
+.sidebar{
+	background-color: lightskyblue;
+	grid-area: s;
+}
+
+.main{
+	background-color: lightskyblue;
+	grid-area: m;
+}
+
+.footer{
+	background-color: lightskyblue;
+	grid-area: f;
+}
+
+.end-sidebar{
+	background-color: lightskyblue;
+	grid-area: e;
+}
+
+.myGrid3 {
+	background-color: lightcyan;
+	padding: 20px;
+	margin-top: 50px;
+	min-height: 600px;
+	width: calc(100% - 40px);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.myGrid3 div{
+	background-color: lightseagreen;
+	filter: drop-shadow(1px 1px 5px grey);
+	padding: 20px;
+	width: 200px;
+	height: 200px;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.myGrid3 div:nth-child(even){
+	grid-column: 1;
+	justify-self: end;
+
+}
+
+.myGrid3 div:nth-child(odd){
+	grid-column: 2;
+	justify-self: start;
+}
+
+#circle1 {
+	border-radius: 50%;
+	filter: drop-shadow(1px 1px 3px grey);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
